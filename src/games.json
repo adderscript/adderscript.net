@@ -1,0 +1,18 @@
+[
+    {
+        "title": "pointNull",
+        "thumbnail": "src/assets/pointNull_thumbnail.png"
+    },
+    {
+        "title": "Polygon Clicker",
+        "thumbnail": "src/assets/polygonClicker_thumbnail.png"
+    },
+    {
+        "title": "Flappy Square",
+        "thumbnail": "src/assets/flappySquare_thumbnail.png"
+    },
+    {
+        "title": "Pixels",
+        "thumbnail": "src/assets/pixels_thumbnail.png"
+    }
+]
