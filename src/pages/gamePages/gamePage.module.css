@@ -1,0 +1,60 @@
+.gameFrame {
+    .controls {
+        position: relative;
+        right: -1150px;
+        top: -750px;
+        width: 350px;
+        height: 720px;
+        
+        border-left: 3px solid #383838;
+
+        .controlItem {
+            display: flex;
+            margin-bottom: 12px;
+            margin-left: 55px;
+            align-items: center;
+
+            .key {
+                background-color: #2d2d2d;
+                color: e0e0e0;
+                padding: 5px 10px;
+                border-radius: 4px;
+                font-family: monospace;
+                font-size: 0.9rem;
+                min-width: 25px;
+                text-align: center;
+                box-shadow: 0 2px 0 #1a1a1a;
+                margin-right: 10px;
+            }
+
+            .description {
+                color: #aaaaaa;
+            }
+        }
+
+        .objective {
+            border-bottom: 2px solid #252525;
+
+            .objectiveText {
+                background-color: rgba(140, 82, 255, 0.1);
+                border-left: 3px solid #8c52ff;
+                padding: 10px;
+                margin: 25px;
+
+                text-align: left;
+            }
+        }
+    }
+
+    iframe {
+        position: relative;
+        right: 15%;
+        border-color: #ffffff;
+        border-width: 5px;
+        border-radius: 10px;
+    }
+}
+
+h1 {
+    color: #8c52ff;
+}

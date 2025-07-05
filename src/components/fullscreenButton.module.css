@@ -1,0 +1,20 @@
+.fullscreenButton {
+    position: relative;
+    top: -65px;
+    left: 30%;
+    width: 100px;
+    height: 35px;
+    font-size: 16px;
+
+    background-color: #8c52ff;
+
+    border: none;
+    border-radius: 5px;
+
+    transition: all 0.3s ease;
+}
+
+.fullscreenButton:hover {
+    transform: scale(1.1);
+    background-color: #6023db;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import style from "./gameGrid.module.css";
 
 // components
@@ -11,7 +12,7 @@ function GameGrid() {
 		<div className={style.gridContainer}>
 			{items.map((item, index) => (
 				<div key={index}>
-					<GameCard title={item.title} thumbnail={item.thumbnail} />
+					<GameCard title={item.title} thumbnail={item.thumbnail} page={item.page} />
 				</div>
 			))}
 		</div>

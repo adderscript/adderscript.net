@@ -1,18 +1,22 @@
 [
     {
         "title": "pointNull",
-        "thumbnail": "src/assets/pointNull_thumbnail.png"
+        "thumbnail": "/assets/pointNull_thumbnail.png",
+        "page": "/pointnull"
     },
     {
         "title": "Polygon Clicker",
-        "thumbnail": "src/assets/polygonClicker_thumbnail.png"
+        "thumbnail": "/assets/polygonClicker_thumbnail.png",
+        "page": "/polygonclicker"
     },
     {
         "title": "Flappy Square",
-        "thumbnail": "src/assets/flappySquare_thumbnail.png"
+        "thumbnail": "/assets/flappySquare_thumbnail.png",
+        "page": "/flappysquare"
     },
     {
         "title": "Pixels",
-        "thumbnail": "src/assets/pixels_thumbnail.png"
+        "thumbnail": "/assets/pixels_thumbnail.png",
+        "page": "/pixels"
     }
 ]
