@@ -8,12 +8,12 @@ function GamePage() {
     const iframeRef = useRef();
 
     function makeFullscreen() {
-    if (iframeRef.current) {
-        iframeRef.current.requestFullscreen?.() ||
-        iframeRef.current.webkitRequestFullscreen?.() ||
-        iframeRef.current.mozRequestFullScreen?.() ||
-        iframeRef.current.msRequestFullscreen?.();
-    }
+        if (iframeRef.current) {
+            iframeRef.current.requestFullscreen?.() ||
+            iframeRef.current.webkitRequestFullscreen?.() ||
+            iframeRef.current.mozRequestFullScreen?.() ||
+            iframeRef.current.msRequestFullscreen?.();
+        }
     }
 
     return (

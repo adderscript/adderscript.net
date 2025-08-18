@@ -1,5 +1,10 @@
 [
     {
+        "title": "Hamster Horsepower",
+        "thumbnail": "/assets/hamsterHorsepower_thumbnail.png",
+        "page": "/hamsterhorsepower"
+    },
+    {
         "title": "pointNull",
         "thumbnail": "/assets/pointNull_thumbnail.png",
         "page": "/pointnull"

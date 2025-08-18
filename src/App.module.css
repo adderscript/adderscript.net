@@ -53,3 +53,14 @@ body {
         color: #aaaaaa;
     }
 }
+
+.appContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.scaledContent {
+    transform-origin: center;
+}
