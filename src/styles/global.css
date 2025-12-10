@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+    /* Primary Colors */
+    --color-accent: #e8b007;
+    --color-accent-hover: #7a3fee;
+    --color-accent-muted: #d1820d;
+    --color-background: #121212;
+
+    /* Surface Colors - Progressive layers */
+    --color-surface-1: #1a1a1a;
+    --color-surface-2: #222222;
+    --color-surface-3: #2a2a2a;
+
+    /* Text Colors */
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #a0a0a0;
+    --color-text-muted: #707070;
+
+    /* Border Colors */
+    --color-border-subtle: #2a2a2a;
+    --color-border-default: #404040;
+    --color-border-emphasis: #606060;
+
+    /* Component-specific (built from base palette) */
+    --color-game-card-background: #1a1a1a;
+    --color-game-card-background-hover: #222222;
+    --color-game-card-border: #404040;
+
+    --color-nav-button: #202020;
+    --color-nav-button-hover: #2a2a2a;
+
+    --color-fullscreen-button: #8c52ff;
+    --color-fullscreen-button-hover: #7a3fee;
+
+    /* Fonts */
+    --font-sans: CascadiaCode, monospace;
+}
+
+@font-face {
+    font-family: "CascadiaCode";
+    src: url("/fonts/CascadiaCode.ttf") format("truetype");
+}
+
+body {
+    @apply bg-background text-white text-center;
+}

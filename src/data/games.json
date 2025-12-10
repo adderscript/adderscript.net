@@ -1,0 +1,94 @@
+[
+    {
+        "title": "Hamster Horsepower",
+        "thumbnailPath": "/thumbnails/hamster-horsepower.png",
+        "gamePage": "/games/hamster-horsepower",
+        "gameUrl": "/games/hamster-horsepower/index.html",
+        "controls": [
+            {
+                "keys": ["Mouse"],
+                "description": "Buy things"
+            },
+            {
+                "keys": ["Space"],
+                "description": "Open shop"
+            }        
+        ]
+    },
+    {
+        "title": "Point Null",
+        "thumbnailPath": "/thumbnails/pointnull.png",
+        "gamePage": "/games/pointnull",
+        "gameUrl": "/games/pointnull/index.html",
+        "controls": [
+            {
+                "keys": ["W", "A", "S", "D"],
+                "description": "Move around"
+            },
+            {
+                "keys": ["Space"],
+                "description": "Jump"
+            },
+            {
+                "keys": ["Mouse"],
+                "description": "Look around / Aim"
+            },
+            {
+                "keys": ["Left Click"],
+                "description": "Action / Fire"
+            },
+            {
+                "keys": ["ESC"],
+                "description": "Pause menu"
+            }
+        ]
+    },
+    {
+        "title": "Polygon Clicker",
+        "thumbnailPath": "/thumbnails/polygon-clicker.png",
+        "gamePage": "/games/polygon-clicker",
+        "gameUrl": "/games/polygon-clicker/index.html",
+        "controls": [
+            {
+                "keys": ["X"],
+                "description": "Click"
+            },
+            {
+                "keys": ["Up", "Down"],
+                "description": "Navigate upgrade panel"
+            },
+            {
+                "keys": ["Z"],
+                "description": "Buy selected upgrade"
+            }        
+        ]
+    },
+    {
+        "title": "Flappy Square",
+        "thumbnailPath": "/thumbnails/flappy-square.png",
+        "gamePage": "/games/flappy-square",
+        "gameUrl": "/games/flappy-square/index.html",
+        "controls": [
+            {
+                "keys": ["Up"],
+                "description": "Flap/Jump"
+            }
+        ]
+    },
+    {
+        "title": "Pixels",
+        "thumbnailPath": "/thumbnails/pixels.png",
+        "gamePage": "/games/pixels",
+        "gameUrl": "/games/pixels/index.html",
+        "controls": [
+            {
+                "keys": ["Up", "Down", "Left", "Right"],
+                "description": "Move"
+            },
+            {
+                "keys": ["X"],
+                "description": "Shoot"
+            }        
+        ]
+    }
+]

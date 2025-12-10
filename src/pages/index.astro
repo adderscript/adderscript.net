@@ -1,11 +1,27 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import { Image } from 'astro:assets';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import NavButton from '../components/NavButton.astro';
+import SocialsButton from '../components/SocialsButton.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<!-- pages -->
+	<div class="m-3 flex flex-wrap gap-6 justify-center">
+		<NavButton name="GAMES" page="/games" icon="/icons/games.svg" />
+		<NavButton name="ABOUT ME" page="/aboutme" icon="/icons/aboutme.svg" />
+	</div>
+	
+	<!-- socials -->
+	<div class="m-3 mb-20 flex flex-wrap gap-6 justify-center">
+		<SocialsButton name="GITHUB" link="https://github.com/adderscript" icon="/icons/github.svg" />
+		<SocialsButton name="EMAIL" link="mailto:alasdair@adderscript.net" icon="/icons/email.svg" />
+		<SocialsButton name="BUY ME A COFFEE" link="https://buymeacoffee.com/AdderScript" icon="/icons/coffee.svg" />
+	</div>
+	
+	<!-- graphic -->
+	<img src="/thumbnails/xkcd-computer.png" alt="comic"  
+		class="w-384 h-216 bg-gray-500 border border-accent border-2 rounded-xl">
 </Layout>
