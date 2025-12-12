@@ -3,13 +3,13 @@ interface Props {
     title: string;
     date: string;
     description: string;
-    blog: string;
+    slug: string;
 }
 
-const { title, date, description, blog } = Astro.props as Props;
+const { title, date, description, slug } = Astro.props as Props;
 ---
 
-<button class="group p-5 bg-blog-card-background hover:bg-blog-card-background-hover rounded-lg
+<a href={`/blog/${slug}`} class="group p-5 bg-blog-card-background hover:bg-blog-card-background-hover rounded-lg
     border-3 border-accent-muted hover:border-accent
     transition-all duration-200"
 >
@@ -20,4 +20,4 @@ const { title, date, description, blog } = Astro.props as Props;
     </h1>
     
     <p class="text-text-secondary">{description}</p>
-</button>
+</a>
