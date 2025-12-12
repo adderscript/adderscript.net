@@ -1,0 +1,13 @@
+---
+import BlogCard from '../../components/BlogCard.astro';
+import Layout from '../../layouts/Layout.astro';
+import blogs from '../../content/blogs.json';
+---
+
+<Layout>
+    <h1 class="mb-10 text-2xl font-bold">Blog</h1>
+
+    {blogs.map((b) => (
+        <BlogCard title={b.title} date={b.date} description={b.description} blog={b.blog} />
+    ))}
+</Layout>

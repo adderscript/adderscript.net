@@ -1,0 +1,23 @@
+---
+interface Props {
+    title: string;
+    date: string;
+    description: string;
+    blog: string;
+}
+
+const { title, date, description, blog } = Astro.props as Props;
+---
+
+<button class="group p-5 bg-blog-card-background hover:bg-blog-card-background-hover rounded-lg
+    border-3 border-accent-muted hover:border-accent
+    transition-all duration-200"
+>
+    <h1 class="m-5 text-xl text-accent-muted group-hover:text-accent font-bold
+        transition-all duration-200"
+    >
+        {title}
+    </h1>
+    
+    <p class="text-text-secondary">{description}</p>
+</button>

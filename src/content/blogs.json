@@ -1,0 +1,8 @@
+[
+    {
+        "title": "Hello!",
+        "date": "2025-01-01",
+        "description": "Introduction to my blog",
+        "blog": "/blogs/hello.mdx"
+    }
+]

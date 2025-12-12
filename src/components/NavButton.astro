@@ -8,7 +8,7 @@ interface Props {
 const { name, page, icon } = Astro.props as Props;
 ---
 
-<button class="flex gap-2 px-6 py-3 bg-nav-button hover:bg-nav-button-hover
+<a href={page} class="flex gap-2 px-6 py-3 bg-nav-button hover:bg-nav-button-hover
     border-2 border-accent-muted
     rounded-md transition-all duration-100
     text-text-secondary font-bold hover:text-text-primary"

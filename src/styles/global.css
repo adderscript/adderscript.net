@@ -25,7 +25,9 @@
     /* Component-specific (built from base palette) */
     --color-game-card-background: #1a1a1a;
     --color-game-card-background-hover: #222222;
-    --color-game-card-border: #404040;
+
+    --color-blog-card-background: #1c1c1c;
+    --color-blog-card-background-hover: #242424;
 
     --color-nav-button: #202020;
     --color-nav-button-hover: #2a2a2a;
