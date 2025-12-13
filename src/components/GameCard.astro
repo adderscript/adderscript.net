@@ -1,0 +1,23 @@
+---
+interface Props {
+    title: string;
+    thumbnailPath: string;
+    gamePage: string;
+}
+
+const  { title, thumbnailPath, gamePage } = Astro.props as Props;
+---
+
+<a href={gamePage} class="group relative w-120 h-68 border-3 border-accent-muted hover:border-accent rounded-lg bg-[#000000] overflow-hidden
+    transition-all durection-100 transform hover:-translate-y-3"
+>
+    <img src={thumbnailPath} alt={title}
+         class="w-full h-auto object-cover image-rendering-pixelated
+            transition-all duration-200 group-hover:opacity-50">
+    
+    <span class="mt-50 absolute inset-0 flex items-center justify-center text-[#00000000] font-bold text-4xl
+        transition-all duration-300 group-hover:text-accent transform group-hover:-translate-y-5"
+    >
+        {title}
+    </span>
+</a>

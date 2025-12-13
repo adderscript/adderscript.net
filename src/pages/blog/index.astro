@@ -7,7 +7,7 @@ const blogs = await getCollection("blog")
 ---
 
 <Layout>
-    <h1 class="mb-10 text-2xl font-bold">Blog</h1>
+	<h1 class="mb-7 text-3xl text-center text-accent-muted font-bold">The Weirdness Files</h1>
 
     {blogs.map(post => (
         <BlogCard title={post.data.title} date={post.data.date} description={post.data.description} slug={post.slug} />

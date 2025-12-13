@@ -19,9 +19,10 @@ if (!post) {
 
 const { Content } = await post.render();
 ---
+
 <Layout>
-	<div class="text-left">
-		<h1 class="mb-5 text-2xl text-center text-accent-muted font-bold">{post.data.title}</h1>
+	<h1 class="mb-7 text-2xl text-center text-accent-muted font-bold">{post.data.title}</h1>
+	<article class="prose prose-invert p-10 text-left bg-surface-1 rounded-lg border-2 border-accent-muted">
 		<Content />
-	</div>
+	</article>
 </Layout>

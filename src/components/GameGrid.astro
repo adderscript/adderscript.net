@@ -1,0 +1,13 @@
+---
+import GameCard from './GameCard.astro'
+import games from '../content/games.json'
+---
+
+<div class="mx-auto w-max max-w-7xl px-20 pb-15 pt-5
+    grid gap-4 lg:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3
+    gap-x-100 gap-y-6 place-items-center"
+>
+    {games.map(game => (
+        <GameCard title={game.title} thumbnailPath={game.thumbnailPath} gamePage={game.gamePage} />
+    ))}
+</div>
