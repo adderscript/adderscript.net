@@ -1,0 +1,153 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GameControls from '../../components/GameControls.astro';
+import games from '../../content/games.json';
+
+export function getStaticPaths() {
+    return games.map((game) => ({
+        params: { slug: game.gamePage.split('/').pop() },
+        props: { game }
+    }));
+}
+
+const { game } = Astro.props;
+---
+
+<Layout>
+    <div class="w-full max-w-[1600px] mx-auto px-5 py-10">
+        <h1 class="text-[28px] font-semibold text-accent-muted mb-6">
+            {game.title}
+        </h1>
+
+        <div class="game-layout">
+            <!-- Game Container -->
+            <div class="game-container-wrapper bg-game-card-background rounded-lg overflow-hidden">
+                <div id="game-container" class="relative bg-black">
+                    <iframe
+                        id="game-iframe"
+                        src={game.gameUrl}
+                        title={game.title}
+                        allowfullscreen
+                        allow="gamepad; microphone; camera"
+                        class="w-full h-full border-none block"
+                    ></iframe>
+
+                    <!-- Fullscreen Button (always in bottom right) -->
+                    <button
+                        id="fullscreen-btn"
+                        class="absolute bottom-4 right-4 z-50 flex gap-2 px-4 py-2 bg-black/80 hover:bg-black/90
+                            border-2 border-accent-muted
+                            rounded-md transition-all duration-100
+                            text-text-secondary font-bold hover:text-text-primary"
+                    >
+                        <span id="fullscreen-text">⛶ Fullscreen</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Controls Sidebar -->
+            <div class="controls-sidebar">
+                <GameControls controls={game.controls} />
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    /* Game Layout */
+    .game-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .game-container-wrapper {
+        width: 100%;
+    }
+
+    #game-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+        height: 0;
+    }
+
+    #game-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #game-container button {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 50;
+    }
+
+    @media (min-width: 1024px) {
+        .game-layout {
+            flex-direction: row;
+        }
+
+        .game-container-wrapper {
+            width: 60vw;
+            flex-shrink: 0;
+        }
+
+        .controls-sidebar {
+            width: 320px;
+            flex-shrink: 0;
+        }
+    }
+
+    /* Fullscreen styles */
+    #game-container:fullscreen {
+        width: 100vw !important;
+        height: 100vh !important;
+        max-width: 100vw !important;
+        max-height: 100vh !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #game-container:fullscreen iframe {
+        width: 100% !important;
+        height: 100% !important;
+    }
+</style>
+
+<script>
+    const gameContainer = document.getElementById('game-container') as HTMLDivElement;
+    const fullscreenBtn = document.getElementById('fullscreen-btn') as HTMLButtonElement;
+    const fullscreenText = document.getElementById('fullscreen-text') as HTMLSpanElement;
+
+    function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+            gameContainer.requestFullscreen().catch(err => {
+                console.error('Error attempting to enable fullscreen:', err);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    }
+
+    function handleFullscreenChange() {
+        const isFullscreen = !!document.fullscreenElement;
+
+        if (isFullscreen) {
+            fullscreenText.textContent = '✕ Exit Fullscreen';
+        } else {
+            fullscreenText.textContent = '⛶ Fullscreen';
+        }
+    }
+
+    fullscreenBtn.addEventListener('click', toggleFullscreen);
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+</script>

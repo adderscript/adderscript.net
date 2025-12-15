@@ -1,0 +1,19 @@
+<h1 id="user-count" class="
+    fixed top-5 right-5 p-2 bg-accent border-2 border-accent-muted text-surface-1 rounded-lg"
+>
+    Users online: …
+</h1>
+
+<script>
+    const element = document.getElementById("user-count");
+    const websocket = new WebSocket("ws://localhost:8080/ws");
+
+    websocket.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        element.textContent = `Users online: ${data.users}`;
+    };
+
+    websocket.onerror = () => {
+        element.textContent = "Users online: unavailable";
+    };
+</script>

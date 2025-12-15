@@ -1,0 +1,30 @@
+---
+interface Control {
+    keys: string[];
+    description: string;
+}
+
+interface Props {
+    controls: Control[];
+}
+
+const { controls } = Astro.props;
+---
+
+<div class="bg-game-card-background rounded-lg p-6 border-2 border-border-subtle">
+    <h2 class="text-xl font-semibold text-accent-muted mb-4">Controls</h2>
+    <div class="space-y-3">
+        {controls.map((control) => (
+            <div class="flex flex-col gap-2">
+                <div class="flex gap-2 flex-wrap">
+                    {control.keys.map((key) => (
+                        <kbd class="px-3 py-1.5 bg-surface-2 border-2 border-accent-muted rounded text-sm font-mono text-text-secondary font-bold">
+                            {key}
+                        </kbd>
+                    ))}
+                </div>
+                <span class="text-text-secondary text-sm">{control.description}</span>
+            </div>
+        ))}
+    </div>
+</div>
