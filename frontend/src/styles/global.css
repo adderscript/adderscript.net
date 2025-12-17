@@ -48,3 +48,11 @@
 body {
     @apply bg-background text-white text-center;
 }
+
+.prose h1 {
+    @apply text-3xl font-bold
+}
+
+.prose h2 {
+    @apply text-2xl font-bold
+}

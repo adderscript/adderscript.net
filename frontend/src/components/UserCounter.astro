@@ -1,5 +1,5 @@
 <h1 id="user-count" class="
-    fixed top-5 right-5 p-2 bg-accent border-2 border-accent-muted text-surface-1 rounded-lg"
+    fixed top-5 right-5 z-100 p-2 bg-accent border-2 border-accent-muted text-surface-1 rounded-lg"
 >
     Users online: …
 </h1>
@@ -8,12 +8,14 @@
     const element = document.getElementById("user-count");
     const websocket = new WebSocket("ws://localhost:8080/ws");
 
-    websocket.onmessage = (event) => {
-        const data = JSON.parse(event.data);
-        element.textContent = `Users online: ${data.users}`;
-    };
+    if (element) {
+        websocket.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            element.textContent = `Users online: ${data.users}`;
+        };
 
-    websocket.onerror = () => {
-        element.textContent = "Users online: unavailable";
-    };
+        websocket.onerror = () => {
+            element.textContent = "Users online: unavailable";
+        };
+    }
 </script>
