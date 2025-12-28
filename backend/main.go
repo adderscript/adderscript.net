@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 	"sync"
 
 	"github.com/gorilla/websocket"
@@ -74,6 +75,11 @@ func websocketHandler(responseWriter http.ResponseWriter, request *http.Request)
 func main() {
 	http.HandleFunc("/ws", websocketHandler)
 
-	log.Println("WebSocket server running on :8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	log.Println("WebSocket server running on :" + port)
+	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
