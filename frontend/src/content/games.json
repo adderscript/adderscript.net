@@ -1,9 +1,34 @@
 [
     {
+        
+        "title": "Wizards",
+        "thumbnailPath": "/thumbnails/wizards.png",
+        "gamePage": "/games/wizards",
+        "gameUrl": "/game-iframes/wizards/index.html",
+        "controls": [
+            {
+                "keys": ["W", "A", "S", "D"],
+                "description": "Move around"
+            },
+            {
+                "keys": ["Mouse"],
+                "description": "Move gun"
+            },
+            {
+                "keys": ["Left Mouse Button"],
+                "description": "Shoot"
+            },
+            {
+                "keys": ["ESC"],
+                "description": "Open settings"
+            }
+        ]
+    },
+    {
         "title": "Hamster Horsepower",
         "thumbnailPath": "/thumbnails/hamster-horsepower.png",
         "gamePage": "/games/hamster-horsepower",
-        "gameUrl": "/games/hamster-horsepower/index.html",
+        "gameUrl": "/game-iframes/hamster-horsepower/index.html",
         "controls": [
             {
                 "keys": ["Mouse"],
@@ -19,7 +44,7 @@
         "title": "Point Null",
         "thumbnailPath": "/thumbnails/pointnull.png",
         "gamePage": "/games/pointnull",
-        "gameUrl": "/games/pointnull/index.html",
+        "gameUrl": "/game-iframes/pointnull/index.html",
         "controls": [
             {
                 "keys": ["W", "A", "S", "D"],
@@ -47,7 +72,7 @@
         "title": "Polygon Clicker",
         "thumbnailPath": "/thumbnails/polygon-clicker.png",
         "gamePage": "/games/polygon-clicker",
-        "gameUrl": "/games/polygon-clicker/index.html",
+        "gameUrl": "/game-iframes/polygon-clicker/index.html",
         "controls": [
             {
                 "keys": ["X"],
@@ -67,7 +92,7 @@
         "title": "Flappy Square",
         "thumbnailPath": "/thumbnails/flappy-square.png",
         "gamePage": "/games/flappy-square",
-        "gameUrl": "/games/flappy-square/index.html",
+        "gameUrl": "/game-iframes/flappy-square/index.html",
         "controls": [
             {
                 "keys": ["Up"],
@@ -79,7 +104,7 @@
         "title": "Pixels",
         "thumbnailPath": "/thumbnails/pixels.png",
         "gamePage": "/games/pixels",
-        "gameUrl": "/games/pixels/index.html",
+        "gameUrl": "/game-iframes/pixels/index.html",
         "controls": [
             {
                 "keys": ["Up", "Down", "Left", "Right"],
