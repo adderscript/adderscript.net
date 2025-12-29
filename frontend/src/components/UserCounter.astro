@@ -6,7 +6,7 @@
 
 <script>
     const element = document.getElementById("user-count");
-    const websocket = new WebSocket("ws://localhost:8080/ws/presence")
+    const websocket = new WebSocket("wss://adderscriptnet-production.up.railway.app/ws/presence")
 
     if (element) {
         websocket.onmessage = (event) => {
